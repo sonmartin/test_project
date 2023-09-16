@@ -1,10 +1,9 @@
 "use client";
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
 import React, { useState } from "react";
 import { nav, ListProduct } from "./constans";
 import IconPage from "../app/config/Icons";
-
 
 export default function Home() {
   const classes = styles;
@@ -13,8 +12,8 @@ export default function Home() {
     setActiveColor(itemColor);
   };
   return (
-    <main >
-    <div className={classes.container}>
+    <main>
+      <div className={classes.container}>
         <div className={classes.ContainerContent}>
           <div className={classes.wrapperNav}>
             <ul className={classes.NavContent}>
@@ -54,17 +53,13 @@ export default function Home() {
                   <h6>
                     <strong>{itemListProduct.title}</strong>
                   </h6>
-                  <Image src={IconPage.IcNext} alt="iconNext"/>
+                  <Image src={IconPage.IcNext} alt="iconNext" />
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-     
-
-     
     </main>
-  )
+  );
 }
